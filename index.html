@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Nelson | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h1>Hi, I'm Michael — A Web Developer</h1>
+    <p>I build responsive, engaging websites and apps. Check out my work below!</p>
+    <button onclick="document.getElementById('projects').scrollIntoView()">View My Projects</button>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Awesome App</h3>
+      <button onclick="openModal('project1')">View Details</button>
+      <a href="https://example.com" target="_blank"><button>Visit Project</button></a>
+    </div>
+  </section>
+
+  <section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>Git & GitHub</li>
+  </ul>
+</section>
+
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <div id="modal-project1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('project1')">&times;</span>
+      <h2>Awesome App</h2>
+      <p>This project is a web application that does awesome things using HTML, CSS, and JavaScript.</p>
+
+      <div class="carousel">
+        <img id="carousel-image-project1" src="image1.jpg" alt="Project Screenshot">
+        <div class="carousel-controls">
+          <button onclick="prevImage('project1')">Prev</button>
+          <button onclick="nextImage('project1')">Next</button>
+        </div>
+        <div id="carousel-indicator-project1">1 / 3</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
